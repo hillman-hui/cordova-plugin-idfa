@@ -26,6 +26,10 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 <param name="ios-package" value="IdfaPlugin" />
             </feature>
         </config-file>
+        
+        <config-file target="*-Info.plist" parent="NSUserTrackingUsageDescription">
+            <string>${EXECUTABLE_NAME} is using user tracking for firebase analytics purpose</string>
+        </config-file>
 
         <header-file src="src/ios/IdfaPlugin.h" />
         <source-file src="src/ios/IdfaPlugin.m" />
